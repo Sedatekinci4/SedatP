@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1658079902 source:c:\users\tades\documents\c projects\palindromecheck\sorting\sorting\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1658080246 source:c:\users\tades\documents\c projects\palindromecheck\triangle_sorting_by_area\triangle_sorting_by_area\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
