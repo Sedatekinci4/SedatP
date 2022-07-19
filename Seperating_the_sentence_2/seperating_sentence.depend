@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1657904259 source:c:\users\tades\documents\c projects\palindromecheck\seperating_sentence\main.c
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+
+1657904259 source:c:\users\tades\documents\c projects\palindromecheck\seperating_sentence_2\main.c
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+
+1657904259 source:c:\users\tades\documents\c projects\palindromecheck\seperating_the_sentence_2\main.c
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+
