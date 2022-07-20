@@ -1,4 +1,4 @@
--------------- Binary to Decimal Converter --------------
+# -------------- Binary to Decimal Converter --------------
 
 This is a program to convert binary number to its decimal value.
 User should not input more than 8 digits or we can say 8 digits.
