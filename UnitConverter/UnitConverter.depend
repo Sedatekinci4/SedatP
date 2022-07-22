@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1658504779 source:c:\users\tades\documents\c projects\palindromecheck\sorting\unitconverter\main.c
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+
