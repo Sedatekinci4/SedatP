@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1658821228 source:c:\users\tades\documents\c projects\palindromecheck\sorting\piglatingame\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1659122492 source:c:\users\tades\documents\c projects\palindromecheck\sorting\piglatingame;;;\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
