@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1659027933 source:c:\users\tades\documents\c projects\palindromecheck\sorting\bubblesort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
