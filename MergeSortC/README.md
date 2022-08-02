@@ -12,6 +12,8 @@ While comparing two sublists for merging, the first element of both lists is tak
 While sorting in ascending order, the element that is of a lesser value becomes a new element of the sorted list. 
 This procedure is repeated until both the smaller sublists are empty and the new combined sublist comprises all the elements of both the sublists.
 
+Source: https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/tutorial/
+
 EXAMPLE OUTPUT
 ------------------------------------------------------------------------
 ```diff
