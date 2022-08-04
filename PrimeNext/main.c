@@ -1,11 +1,11 @@
-// İnputted Next Prime Number
+// Ãnputted Next Prime Number
 
 #include <stdio.h>
 
 int main(){
     char answer = 'y';
     int num = 2, i = 0;
-    printf("\This program will find the next prime number after your inputted integer.\n");
+    printf("\nThis program will find the next prime number after your inputted integer.\n");
     printf("Please enter your integer: \t");
     scanf("%d", &num);
     do
