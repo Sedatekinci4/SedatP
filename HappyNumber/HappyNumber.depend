@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1658751189 source:c:\users\tades\documents\c projects\palindromecheck\sorting\happynumber\main.c
+	<stdio.h>
+	<stdbool.h>
+
