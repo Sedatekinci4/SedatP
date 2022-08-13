@@ -13,7 +13,6 @@ int main(){
 
     srand(time(NULL));
 
-    printf("%d", num);
     do
     {
 
@@ -34,7 +33,6 @@ int main(){
 
     }while(answer == 'y' || answer == 'Y');
 
-    printf("\nThe final heads number is: %d\nThe final tails number is: %d\nThe flip count is        : %d\n\n", heads, tails, allflips);
     printf("\nThe final heads number is: %d\nThe final tails number is: %d\nThe flip count is        : %d\n\n", heads, tails, allflips);
     getchar();
     return 0;
