@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1660747053 source:c:\users\tades\documents\c projects\palindromecheck\sorting\carhash\main.c
+	<stdio.h>
+	<stdbool.h>
+	<string.h>
+	<stdint.h>
+
