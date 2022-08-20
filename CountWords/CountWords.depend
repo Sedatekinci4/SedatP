@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1658757217 source:c:\users\tades\documents\c projects\palindromecheck\sorting\countwords\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
