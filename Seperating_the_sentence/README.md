@@ -1,14 +1,11 @@
 A program to seperate sentence to words.
 You can change the max character number by changing MAX_LIMIT
 
-
-EXAMPLE INPUT
-------------------------------------------------------------------------
-Hey hello there! In this program we will seperate the sentence to its words. And this is an example
-
-
 EXAMPLE OUTPUT
 ------------------------------------------------------------------------
+```diff
+Hey hello there! In this program we will seperate the sentence to its words. And this is an example
+
 Hey
 hello
 there!
