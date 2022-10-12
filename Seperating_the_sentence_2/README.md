@@ -4,13 +4,11 @@ The first version of this program has max limit.
 But this version don't have limit so it's a plus.
 
 
-EXAMPLE INPUT
-------------------------------------------------------------------------
-Hey hello there! In this program we will seperate the sentence to its words. And this is an example. Also there is no limit
-
-
 EXAMPLE OUTPUT
 ------------------------------------------------------------------------
+```diff
+Hey hello there! In this program we will seperate the sentence to its words. And this is an example. Also there is no limit
+
 Hey
 hello
 there!
