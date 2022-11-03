@@ -13,6 +13,9 @@ void deallocate(Node** root);
 void add_to_the_beginning(Node** root, int value);
 void add_after_element(Node* node, int value);
 void sorted_add(Node** root, int value);
+void delete_element(Node** node, int value);
+void reverse_list(Node** root);
+void print_list(Node* root);
 
 void add_to_the_end(Node** root, int value){
     Node* new_node = malloc(sizeof(Node));
@@ -89,9 +92,57 @@ void sorted_add(Node** root, int value){
     add_to_the_end(&curr, value);
 }
 
+void delete_element(Node** root, int value){
+    if(*root == NULL)
+    {
+        return;
+    }
+    if((*root)->val == value)
+    {
+        Node* temp = *root;
+        *root = (*root)->next;
+        free(temp);
+        return;
+    }
+
+    for(Node* curr = *root; curr->next != NULL; curr = curr->next)
+    {
+        if(curr->next->val == value)
+        {
+            Node* temp = curr->next;
+            curr->next = curr->next->next;
+            free(temp);
+            return;
+        }
+    }
+}
+
+void reverse_list(Node** root){
+    printf("REVERSED\n\n");
+    Node* curr = *root;
+    Node* back_ptr = NULL;
+    while(curr != NULL)
+    {
+        Node* forward_ptr = curr->next;
+        curr->next = back_ptr;
+        back_ptr = curr;
+        curr = forward_ptr;
+    }
+    *root = back_ptr;
+}
+
+void print_list(Node* root){
+    int count = 0;
+    for(Node* curr = root; curr != NULL; curr = curr->next )
+    {
+        count++;
+        printf("%d\n", curr->val);
+    }
+    printf("\nThe total number of elements in that linked list is -> %d\n", count);
+}
+
 int main(){
     Node* root = NULL;
-    int count;
 
     /*add_to_the_beginning(&root, 3);
     add_to_the_beginning(&root, 2);
@@ -107,13 +158,16 @@ int main(){
     sorted_add(&root, 7);
     sorted_add(&root, 10);
     sorted_add(&root, 4);
+    print_list(root);
 
-    for(Node* curr = root; curr != NULL; curr = curr->next )
-    {
-        count++;
-        printf("%d\n", curr->val);
-    }
-    printf("\nThe total number of elements in that linked list is -> %d\n", count);
+    /*delete_element(&root, 1);
+    delete_element(&root, 10);
+    delete_element(&root, 5);*/
+
+    printf("\n----------------------------\n");
+    reverse_list(&root);
+    print_list(root);
+
 
     deallocate(&root);
     return 0;
