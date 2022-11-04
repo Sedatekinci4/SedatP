@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1667580353 source:c:\users\tades\documents\c projects\palindromecheck\sorting\linked_list\main.c
+1667582188 source:c:\users\tades\documents\c projects\palindromecheck\sorting\linked_list\main.c
 	<crtdbg.h>
 	<stdio.h>
 	<stdlib.h>

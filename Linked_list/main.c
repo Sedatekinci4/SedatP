@@ -17,7 +17,8 @@ void delete_element(Node** node, int value);
 void reverse_list(Node** root);
 void print_list(Node* root);
 void add_to_certain_position(Node** root, int value, int pos);
-
+void delete_from_certain_position(Node** root, int pos);
+void delete_all_list(Node** root);
 
 void add_to_the_end(Node** root, int value){
     Node* new_node = malloc(sizeof(Node));
@@ -184,6 +185,57 @@ void add_to_certain_position(Node** root, int value, int pos){
 
 }
 
+void delete_from_certain_position(Node** root, int pos){
+    if(*root == NULL)
+    {
+        return;
+    }
+    int count = 0;
+    for(Node* curr = *root; curr != NULL; curr = curr->next )
+    {
+        count++;
+    }
+    printf("Pos---%d---", pos-1);
+    printf("Count---%d---", count);
+
+    if(pos-1 >= count)
+    {
+        printf("\n\n---------------WARNING---------------\n----You cannot delete this location, because it's not an element for this linked list!!!\n");
+        return;
+    }
+    Node* curr = *root;
+    if(pos == 1)
+    {
+        *root = (*root)->next;
+        free(curr);
+        return;
+    }
+    pos--;
+    while(pos != 1)
+    {
+        curr = curr->next;
+        pos--;
+    }
+    Node* temp = curr->next;
+    curr->next = temp->next;
+    free(temp);
+}
+
+void delete_all_list(Node** root){
+    if(*root == NULL)
+    {
+        return;
+    }
+    while((*root)->next != NULL)
+    {
+        Node* curr = *root;
+        *root = (*root)->next;
+        free(curr);
+    }
+    free(*root);
+    *root = NULL;
+}
+
 int main(){
     Node* root = NULL;
 
@@ -213,21 +265,36 @@ int main(){
 
     add_to_certain_position(&root, 69, 7);
     print_list(root);
+
     add_to_certain_position(&root, 151, 1);
     print_list(root);
 
     add_to_certain_position(&root, 31, 5);
     print_list(root);
 
-    add_to_certain_position(&root, 99, 15);
+    add_to_certain_position(&root, 99, 10);
     print_list(root);
 
-    //add_to_certain_position(&root, 75, 15);
-    //print_list(root);
+    delete_from_certain_position(&root, 10);
+    print_list(root);
 
-    //add_to_certain_position(&root, 100, 10);
-    //print_list(root);
+    delete_from_certain_position(&root, 11);
+    print_list(root);
 
+    delete_from_certain_position(&root, 1);
+    print_list(root);
+
+    delete_from_certain_position(&root, 5);
+    print_list(root);
+
+
+    delete_all_list(&root);
+    print_list(root);
+
+    sorted_add(&root, 7);
+    sorted_add(&root, 10);
+    sorted_add(&root, 4);
+    print_list(root);
 
     deallocate(&root);
     return 0;
