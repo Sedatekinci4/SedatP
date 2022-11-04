@@ -16,6 +16,8 @@ void sorted_add(Node** root, int value);
 void delete_element(Node** node, int value);
 void reverse_list(Node** root);
 void print_list(Node* root);
+void add_to_certain_position(Node** root, int value, int pos);
+
 
 void add_to_the_end(Node** root, int value){
     Node* new_node = malloc(sizeof(Node));
@@ -118,7 +120,7 @@ void delete_element(Node** root, int value){
 }
 
 void reverse_list(Node** root){
-    printf("REVERSED\n\n");
+    printf("REVERSED\n");
     Node* curr = *root;
     Node* back_ptr = NULL;
     while(curr != NULL)
@@ -133,12 +135,53 @@ void reverse_list(Node** root){
 
 void print_list(Node* root){
     int count = 0;
+    printf("\n");
     for(Node* curr = root; curr != NULL; curr = curr->next )
     {
         count++;
         printf("%d\n", curr->val);
     }
     printf("\nThe total number of elements in that linked list is -> %d\n", count);
+}
+
+void add_to_certain_position(Node** root, int value, int pos){
+    Node* new_node = malloc(sizeof(Node));
+    if(new_node == NULL)
+    {
+        exit(7);
+    }
+
+    int count = 0;
+    for(Node* curr = *root; curr != NULL; curr = curr->next )
+    {
+        count++;
+    }
+    if(pos-1 > count)
+    {
+        printf("\n\n---------------WARNING---------------\n----You cannot add to this location, because it's more than the last element of the linked list!!!\n");
+        return;
+    }
+
+    new_node->val = value;
+
+    if(pos == 1)
+    {
+        new_node->next = *root;
+        *root = new_node;
+        return;
+    }
+
+    Node* curr = *root;
+    pos--;
+    while(pos != 1)
+    {
+        curr = curr->next;
+        pos--;
+    }
+
+    new_node->next = curr->next;
+    curr->next = new_node;
+
 }
 
 int main(){
@@ -167,6 +210,23 @@ int main(){
     printf("\n----------------------------\n");
     reverse_list(&root);
     print_list(root);
+
+    add_to_certain_position(&root, 69, 7);
+    print_list(root);
+    add_to_certain_position(&root, 151, 1);
+    print_list(root);
+
+    add_to_certain_position(&root, 31, 5);
+    print_list(root);
+
+    add_to_certain_position(&root, 99, 15);
+    print_list(root);
+
+    //add_to_certain_position(&root, 75, 15);
+    //print_list(root);
+
+    //add_to_certain_position(&root, 100, 10);
+    //print_list(root);
 
 
     deallocate(&root);
