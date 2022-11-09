@@ -1,5 +1,11 @@
-This program is for manupilating the array for a couple ways. I will add new features and new manipulaton types later on.
-For now it only makes rotating and reversing. 
+This is a program for manupilating the array in a couple ways.
+
+- print
+- reverse
+- rotate left once
+- rotate left n times
+- rotate right once
+- rotate right n times 
 
 You can see all features in use below.
 
