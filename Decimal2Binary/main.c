@@ -14,8 +14,13 @@ int binary_arr[8];
 
 int main(){
     int num;
-    printf("Please enter the decimal number to convert to binary :");
+    printf("Please enter the decimal number to convert to binary (Only 0 to 255 and positive decimals):");
     scanf("%d", &num);
+    if(num < 0 || num > 255)
+    {
+        printf("\nYou've entered a negative or inappropriate number!!\n");
+        return 0;
+    }
     toDecimal(num);
     printStack();
 
