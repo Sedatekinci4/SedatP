@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1659374576 source:c:\users\tades\documents\c projects\palindromecheck\sorting\simplecalculator\main.c
+	<stdio.h>
+	<math.h>
+	<windows.h>
+
+1669575376 source:c:\users\tades\documents\c projects\palindromecheck\sorting\simplecalculator;;;\main.c
+	<stdio.h>
+	<math.h>
+	<windows.h>
+	<stdlib.h>
+
