@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1670016513 source:c:\users\tades\documents\c projects\palindromecheck\sorting\stackwithlinkedlist\main.c
+	<stdio.h>
+	<stdlib.h>
+
