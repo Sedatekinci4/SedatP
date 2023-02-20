@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1658493284 source:c:\users\tades\documents\c projects\palindromecheck\sorting\login\main.c
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+
