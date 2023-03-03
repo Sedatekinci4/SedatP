@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1677836253 source:c:\users\tades\documents\c projects\palindromecheck\sorting\grapichs\main.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+
+1677836253 source:c:\users\tades\documents\c projects\palindromecheck\sorting\casinobetting\main.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+
