@@ -1,4 +1,4 @@
-This program simply flip an imaginary coin and stores the heads and tails count until user choices to exit the program
+This program simply flips an imaginary coin and then stores the heads and tails count until user choices to exit the program
 
 EXAMPLE OUTPUT
 ------------------------------------------------------------------------
