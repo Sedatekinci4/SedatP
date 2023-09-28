@@ -6,13 +6,13 @@
 
 #define MAX_CHAR 100
 
-int word_occurence(char *string, char *word);
-void word_cencoration(char *string, char *word);
+int word_occurence(char *string,  char const *word);
+void word_cencoration(char *string,  char const *word);
 
 int main(){
     FILE *fp;
     char s[MAX_CHAR];
-    char curse[] = "Fuck ";
+    const char *curse[] = {"shit", "fuck"};
     char* cptr;
 
     fp = fopen("text_file.txt", "r");
@@ -27,12 +27,13 @@ int main(){
     }
     
     printf("%s", s);
-    printf("Bad word has been detected, please be nice!!!!!!\n");
-    int result = word_occurence(s, curse);
+    printf("\nBad word has been detected, please be nice!!!!!!\n");
+    int result = word_occurence(s, curse[0]);
 
-    if(result == 1){
+    while(result > 0){
 
-        word_cencoration(s, curse);
+        word_cencoration(s, curse[0]);
+        result--;
     }
     printf("%s", s);
 
@@ -41,7 +42,7 @@ int main(){
     return 0;
 }
 
-int word_occurence(char *string, char *word){
+int word_occurence(char *string, char const *word){
     int srlen= strlen(string);
     int wdlen = strlen(word);
     int strloop = srlen - wdlen + 1;
@@ -67,11 +68,11 @@ int word_occurence(char *string, char *word){
     return count;
 }
 
-void word_cencoration(char *string, char *word){
+void word_cencoration(char *string, char const *word){
     int srlen= strlen(string);
     int wdlen = strlen(word);
     int strloop = srlen - wdlen + 1;
-    int i, j, k;
+    int i, j, k, wdlen_c = 0;
 
     for(i = 0; i < strloop; i++)
     {
@@ -87,8 +88,14 @@ void word_cencoration(char *string, char *word){
         if(wordFound)
         {
             for(k = i + j - wdlen + 1; k < strloop; k++)
-            {
-                string[k -1] = '*';
+            {   
+                if(wdlen_c != wdlen){
+                    string[k -1] = '*';
+                    wdlen_c++;
+                }
+                else{
+                    break;
+                }
             }
         }
     }
